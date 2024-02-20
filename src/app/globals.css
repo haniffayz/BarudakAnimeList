@@ -1,0 +1,428 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0px;
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar{
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track{
+  background: #ccc;
+  border-radius: 50px;
+}
+body::-webkit-scrollbar-thumb {
+  background: #666;
+  border-radius: 50px;
+}
+
+nav {
+  padding: 10px 2%;
+  justify-content: space-between;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  /* background: #fff; */
+  /* position: sticky; */
+  top: 0;
+  z-index: 10;
+}
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.flex-div {
+  display: flex;
+  align-items: center;
+}
+
+img {
+  /* margin: 10% 0%; */
+  transition: .3s ease all;
+  -webkit-transition: .3s ease all;
+  -moz-transition: .3s ease all;
+  -o-transition: .3s ease all;
+}
+
+.images:hover {
+  scale: 107%;
+}
+
+.input {
+  border: 2px solid #ccc
+}
+
+.input-style {
+  right: 40%;
+}
+
+.custom-loader {
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  background: #628dfb;
+  -webkit-mask:
+    repeating-conic-gradient(#0000 0deg,#000 1deg 70deg,#0000 71deg 90deg),
+    radial-gradient(farthest-side,#0000 calc(100% - 18px),#000 calc(100% - 16px));
+  -webkit-mask-composite: destination-in;
+  mask-composite: intersect;
+  animation:s5 0.5s infinite ;
+}
+@keyframes s5 {to{transform: rotate(.5turn)}}
+
+.Youtube {
+  width: 200%;
+}
+
+
+  @font-face {
+    font-family: 'Agabalumo';
+    src: url('./assets/Agbalumo-Regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+    font-family: 'Midorima';
+    src: url('./assets/font/Midorima-PersonalUse-Regular.ttf');
+    }
+
+
+.title {
+  font-family: 'Midorima';
+  font-weight: 600;
+}
+.title-home {
+  font-family: 'Agabalumo';
+}
+
+
+/* footer */
+
+footer {
+  /* background-color: var(--primary); */
+  text-align: center;
+  padding: 1rem 0 2rem;
+  margin-top: 3rem;
+}
+
+footer .socials {
+  padding: 1rem 0;
+}
+
+footer .socials a {
+  /* color: #fff; */
+  margin: 1rem;
+}
+
+footer .socials a:hover,
+footer .links a:hover {
+  color: var(--bg);
+}
+
+footer .links {
+  margin-bottom: 1.3rem;
+}
+
+footer .links a {
+  /* color: #fff; */
+  padding: 0.7rem 1rem;
+}
+
+footer .credit {
+  font-size: 1rem;
+}
+
+footer .credit a {
+  /* color: var(--bg); */
+  font-weight: 700;
+}
+
+.images-src {
+  background-image: url(./assets/Image/Anime.png);
+  background-repeat: no-repeat;
+  width: 200px;
+}
+
+.scroll-bar::-webkit-scrollbar {
+    overflow: hidden;
+}
+
+.sideBar {
+  transition: all .4s ease;
+}
+
+.Dashboard-card:hover {
+  scale: 102%;
+}
+
+.h1 {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+}
+
+.description {
+  margin-top:  2rem;
+  color: #6c7983;
+  font-weight: 600;
+}
+
+.details {
+  border-radius: 20px;
+}
+
+.img {
+  border-radius: 7px;
+}
+
+.anime-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.anime-details p {
+  display: flex;
+  gap: 0.5rem;
+}
+.anime-details p span:first-child {
+  font-weight: 700;
+}
+
+.trailer-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.trailer-con iframe {
+  outline: none;
+   padding: 1.5rem;
+   border-radius: 10px;
+}
+
+.home-image
+
+.IDanime {
+  padding: 1rem 1rem;
+}
+
+@media (min-width: 1366px) {
+  /* .IDanime {
+    padding: 3rem 10rem;
+  } */
+  .detail {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+  .description {
+    margin-top: 4rem;
+  }
+  .anime-details {
+    margin-top: 0;
+  }
+}
+@media (min-width: 500px) {
+  /* .IDanime {
+    padding: 3rem 18rem;
+  } */
+
+  .description {
+    margin-top: 4rem;
+  }
+  .anime-details {
+    margin-top: 0;
+  }
+  .trailer-con iframe {
+     padding: 1.5rem;
+  }
+
+  .detail {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+.collection-button:hover {
+  background: #edf0f5;
+  color:  #000;
+  transition: 0.2s ease-in-out;
+}
+.post-button:hover {
+  background: #edf0f5;
+  color:  #000;
+  transition: 0.2s ease-in-out;
+}
+
+.post-button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+  border: solid 0.125rem;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  font-weight: 700;
+  box-shadow: 0.25rem 0.25rem;
+  transition:
+  transform 50ms, box-shadow 50ms ;
+  margin-bottom: 26px;
+}
+.collection-button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  font-size: 14px;
+  background-color: #ff9000;
+  color: black;
+  text-transform: uppercase;
+  /* font-family: 'IBM Plex Mono'; */
+  border: solid 0.125rem #121212;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  font-weight: 700;
+  box-shadow: 0.25rem 0.25rem;
+  transition:
+  transform 50ms, box-shadow 50ms ;
+  margin-bottom: 26px;
+}
+
+
+.collection-button:active {
+  transform: translate(0.125rem, 0.125rem);
+  box-shadow: 0.125rem 0.125rem #121212;
+}
+.post-button:active {
+  transform: translate(0.125rem, 0.125rem);
+  box-shadow: 0.125rem 0.125rem;
+}
+
+.animation {
+  transition: 0.2s ease-in-out;
+}
+
+.square {
+  transform: rotate(50deg);
+}
+
+.square-reverse {
+  transform: rotate(310deg);
+}
+
+.square2 {
+  transform: rotate(240deg);
+}
+
+.sidebar-animation {
+  transition:  0.5s ease-in-out;
+}
+
+.home-image {
+  mask-image: linear-gradient(
+        rgba(0,0,0,1) 90%,
+        rgba(0,0,0,0)
+      );
+      -webkit-mask-image: linear-gradient(
+        rgba(0,0,0,1) 90%,
+        rgba(0,0,0,0)
+      );
+}
+
+.home-text {
+  padding: 0 5%;
+  text-align: left;
+  position: fixed;
+}
+
+.text {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; 
+}
+
+nextjs-portal {
+  display: none;
+}
+
+/* global.css atau file CSS terpisah */
+.splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 4s linear ease-in-out;
+}
+
+.splash-screen Image {
+  transform: scale(1);
+  transition: transform 0.5s ease-out;
+}
+
+.scale-animation {
+  animation: scaleAnimation 1s ease-in-out forwards;
+}
+
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes fadeIn {
+  from{
+    opacity: 200%;
+    z-index: 1000;
+  }
+  to {
+    opacity: 0;
+    z-index: 0;  
+  }
+}
+
+.userActionButton:hover {
+  transition: 0.2s ease-in-out;
+}
+
+.Border {
+  border: 1px solid #ffff;
+}
+
+.background {
+  border-image: fill 0 linear-gradient(#0001, #000);
+  border-radius: 12px;
+}
+
+/* .genre {
+  background-color: #628dfb;
+} */
+
+.genre:hover {
+  transition: 0.2s ease-in-out;
+  /* background-color: #6c7983; */
+  color: #fff;
+}
