@@ -15,7 +15,7 @@ const CommentBox = async ({ anime_mal_id }) => {
             {reversedComments.map(comment => {
                 // console.log(comment.time)
                 const commentDate = new Date(comment.time);
-                const diffTime = Math.abs(currentDate - commentDate); // Selisih waktu dalam milidetik
+                const diffTime = Math.abs(currentDate = commentDate); // Selisih waktu dalam milidetik
                 let formattedDate;
 
                 if (diffTime < 24 * 60 * 60 * 1000) { // Jika kurang dari satu hari
