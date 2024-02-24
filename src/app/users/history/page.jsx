@@ -28,8 +28,8 @@ const History = async() => {
 
                     if (diffTime < 24 * 60 * 60 * 1000) {
                         formattedDate = historyDate.toLocaleTimeString('id', {
-                            hour: '2-digit',
-                            minute: '2-digit'
+                            hour: 'numeric',
+                            minute: 'numeric'
                         });
                     } else if (diffTime < 2 * 24 * 60 * 60 * 1000) {
                         formattedDate = 'Kemarin';

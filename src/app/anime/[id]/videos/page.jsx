@@ -1,7 +1,6 @@
 "use client"
-import Image from "next/image"
 import Link from "next/link"
-import { Eye, PlayCircle, Star } from "@phosphor-icons/react/dist/ssr"
+import { PlayCircle} from "@phosphor-icons/react/dist/ssr"
 import { useState } from "react"
 
 const Videos = async({ api, anime_mal_id, user_email, anime_image, anime_title, time }) => {

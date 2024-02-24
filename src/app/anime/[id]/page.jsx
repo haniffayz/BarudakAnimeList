@@ -121,6 +121,8 @@ const Page = async ({ params: { id } }) => {
              })}
            </p>
 
+        {/* Collection Button */}
+
            {
             !collection && user && <CollectionButton anime_mal_id={id} user_email={user?.email} anime_image={anime.data.images.webp.image_url} anime_title={anime.data.title}/>
             }
@@ -132,6 +134,7 @@ const Page = async ({ params: { id } }) => {
          {translatedSynopsis}
          </p>
        
+       {/* Trailer */}
 
        <div className="md:p-4 p-0 mt-6 z-40 relative">
         <div className="hidden lg:block">
@@ -143,6 +146,7 @@ const Page = async ({ params: { id } }) => {
          </div>
         </div>
 
+        {/* Episode */}
 
         <div>
             <Videos api={video} anime_mal_id={id} user_email={user?.email} anime_image={anime.data.images.webp.image_url} anime_title={anime.data.title} />

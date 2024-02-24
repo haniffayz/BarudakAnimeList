@@ -1,11 +1,8 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Star } from "@phosphor-icons/react/dist/ssr";
-import { authUserSession } from "@/libs/auth-libs";
 
 const AnimeList = async({ api }) => {
-
-    const user = await authUserSession()
 
     const truncateText = (text, maxLength) => {
         if (text.length > maxLength) {
@@ -63,3 +60,4 @@ const AnimeList = async({ api }) => {
 }
 
 export default AnimeList
+

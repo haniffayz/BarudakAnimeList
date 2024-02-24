@@ -3,7 +3,7 @@ import { Plus } from "@phosphor-icons/react/dist/ssr"
 import Link from "next/link"
 
 const AnimeGenre = async() => {
-    const genre = await getAnimeResponse('genres/anime')
+    let genre = await getAnimeResponse('genres/anime')
     // console.log(genre)
 
     const limitedGenre = genre?.data.slice(0, 12)
