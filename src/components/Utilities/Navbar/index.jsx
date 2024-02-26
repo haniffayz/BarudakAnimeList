@@ -1,10 +1,8 @@
 "use client"
 import Link from "next/link"
 import InputSearch from "./inputSearch"
-import { CalendarCheck } from "@phosphor-icons/react/dist/ssr"
 import Theme from "@/components/theme/theme"
 import { ThemeProvider } from "next-themes"
-import AnimePoster from "../../AnimeList/PosterAnime" 
 import SideBar from "../Sidebar/SideBar"
 
 const Navbar = () => {

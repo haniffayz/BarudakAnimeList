@@ -11,6 +11,7 @@ import Videos from "./videos/page"
 import { getAnimeEpisodes } from "@/libs/api-libs"
 import Trailer from "@/components/AnimeList/Trailer"
 import { translate } from '@vitalets/google-translate-api';
+import Episodes from "./episodes/page"
 
 const Page = async ({ params: { id } }) => {
     const anime = await getAnimeResponse(`anime/${id}`)
