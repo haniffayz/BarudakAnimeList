@@ -1,7 +1,6 @@
 "use client"
 import { Moon, MoonStars, Sun } from "@phosphor-icons/react/dist/ssr"
-import {useTheme} from "next-themes"
-import {systemTheme} from "next-themes"
+import {useTheme, systemTheme } from "next-themes"
 
 const Theme = () => {
     const {theme, setTheme} = useTheme();

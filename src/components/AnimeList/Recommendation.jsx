@@ -1,6 +1,5 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Star } from "@phosphor-icons/react/dist/ssr";
 
 const RecommendationAnime = ({ api }) => {
 
