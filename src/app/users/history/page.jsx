@@ -23,13 +23,29 @@ const History = async() => {
              <div className="grid 2xl:grid-cols-6 md:grid-cols-4 xl:grid-cols-5 lg:grid-cols-5 sm:grid-cols-4 grid-cols-1 gap-4 md:gap-7 xl:gap-10 2xl:gap-20 sm:gap-20 px-5 bg-colos-accent dark:bg-colos-sidebarColor relative">
                  {reversedHistory?.map((history)=> {
                     const historyDate = new Date(history.time);
-                    const formattedDate = historyDate.toLocaleString(); // Gunakan format tanggal dan waktu default dari perangkat
+                    const diffTime = Math.abs(currentDate - historyDate);
+                    let formattedDate;
+
+                    if (diffTime < 24 * 60 * 60 * 1000) {
+                        formattedDate = historyDate.toLocaleTimeString('id', {
+                            hour: 'numeric',
+                            minute: 'numeric'
+                        });
+                    } else if (diffTime < 2 * 24 * 60 * 60 * 1000) {
+                        formattedDate = 'Kemarin';
+                    } else {
+                        formattedDate = historyDate.toLocaleDateString('id', {
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric'
+                        });
+                    }
 
                     if (history.anime_mal_id !== previousAnimeId) {
                         previousAnimeId = history.anime_mal_id;
                         return (
-                            <Link href={`/anime/${history.anime_mal_id}`} className="cursor-pointer rounded-xl relative" key={history.id}>
-                                <div className="relative">
+                            <Link href={`/anime/${history.anime_mal_id}`} className="cursor-pointer rounded-xl relative">
+                                <div className="relative" key={history.id}>
                                     <div className="flex gap-8 md:block">
                                         <Image src={history.anime_image} alt="" width={150} height={150} className="w-60 max-w-44 md:max-w-full max-h-64 md:max-h-[15rem] xl:max-h-[17.5rem] 2xl:max-h-[18.5rem] h-[18rem] object-cover rounded-lg"/>
                                         <div className="flex flex-col justify-center items-start">
@@ -51,3 +67,5 @@ const History = async() => {
 }
 
 export default History;
+
+
