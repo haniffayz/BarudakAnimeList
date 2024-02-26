@@ -32,11 +32,18 @@ const CommentInput = ({ anime_mal_id, user_email, username, anime_title, user_im
             method: "POST",
             body: JSON.stringify(data)
         })
+
         const postComment = await response.json()
+        const PostingSucces = ()=> {
+            Swal.fire({
+            title: "Postingan Terkirim",
+            icon: "success"
+        })} 
         if (postComment.isCreated) {
             setIsCreated(true)
             setComment("")
             router.refresh()
+            PostingSucces()
         }
         return
     }
