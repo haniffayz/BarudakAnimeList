@@ -11,6 +11,8 @@ const History = async() => {
     const currentDate = new Date();
     const reversedHistory = history.reverse()
 
+    console.log(history);
+
     let previousAnimeId = null;
 
     return (
@@ -27,14 +29,14 @@ const History = async() => {
                     let formattedDate;
 
                     if (diffTime < 24 * 60 * 60 * 1000) {
-                        formattedDate = historyDate.toLocaleTimeString('id', {
+                        formattedDate = historyDate.toLocaleTimeString('id-ID', {
                             hour: 'numeric',
                             minute: 'numeric'
                         });
                     } else if (diffTime < 2 * 24 * 60 * 60 * 1000) {
                         formattedDate = 'Kemarin';
                     } else {
-                        formattedDate = historyDate.toLocaleDateString('id', {
+                        formattedDate = historyDate.toLocaleDateString('id-ID', {
                             year: 'numeric',
                             month: 'long',
                             day: 'numeric'
