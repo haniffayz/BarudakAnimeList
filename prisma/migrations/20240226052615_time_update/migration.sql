@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "History" ALTER COLUMN "time" SET DATA TYPE TIMESTAMPTZ;
