@@ -37,5 +37,5 @@ model History {
   user_email      String
   anime_title     String
   anime_image     String?
-  time            DateTime @default(now()) @db.Timestamptz() 
+  time            DateTime? @default(now()) @db.Timestamptz() 
 }
