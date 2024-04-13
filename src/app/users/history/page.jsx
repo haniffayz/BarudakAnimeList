@@ -54,7 +54,7 @@ const History = async() => {
                                             <h1 className="font-bold md:text-sm xl:text-base 2xl:text-lg text-lg md:pt-4 pb-4 md:pr-12">{history.anime_title}</h1>
                                             <div className="flex flex-row gap-1 text-[14px]">
                                                 <ClockCounterClockwise size={24} className=""/>
-                                                <h1 className="pt-[2px]">{historyDate}</h1>
+                                                <h1 className="pt-[2px]">{formattedDate}</h1>
                                             </div>
                                         </div>
                                     </div>
