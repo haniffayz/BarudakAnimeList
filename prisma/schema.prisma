@@ -28,7 +28,7 @@ model Comment {
   comment         String
   username        String   
   anime_title     String 
-  time            DateTime? @db.Timestamptz()
+  time            DateTime? @default(now()) @db.Timestamptz()
 }
 
 model History {
