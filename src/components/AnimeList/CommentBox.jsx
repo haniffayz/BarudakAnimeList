@@ -43,7 +43,7 @@ const CommentBox = async ({ anime_mal_id }) => {
                                <p className='font-sans font-extrabold 2xl:text-xl text-center justify-center items-center flex mr-12 mb-1'>
                                  🍉@{comment.username}</p>
                               <p className='font-sans 2xl:text-base text-start justify-start items-start flex ml-2'>
-                                 {commentDate}</p>
+                                 {formattedDate}</p>
                             </div>
                             </div>
                             <div className='px-4 py-4'>
