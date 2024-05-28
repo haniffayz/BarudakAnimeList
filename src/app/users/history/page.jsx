@@ -27,21 +27,11 @@ const History = async() => {
                     const historyDate = new Date(history.time);
                     const diffTime = Math.abs(currentDate - historyDate);
                     let formattedDate;
-
-                    if (diffTime < 24 * 60 * 60 * 1000) {
-                        formattedDate = historyDate.toLocaleTimeString('id-ID', {
-                            hour: 'numeric',
-                            minute: 'numeric'
-                        });
-                    } else if (diffTime < 2 * 24 * 60 * 60 * 1000) {
-                        formattedDate = 'Kemarin';
-                    } else {
                         formattedDate = historyDate.toLocaleDateString('id-ID', {
                             year: 'numeric',
                             month: 'long',
                             day: 'numeric'
                         });
-                    }
 
                     if (history.anime_mal_id !== previousAnimeId) {
                         previousAnimeId = history.anime_mal_id;

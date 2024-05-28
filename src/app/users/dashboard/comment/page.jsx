@@ -22,12 +22,24 @@ const Comment = async () => {
                      const commentDate = new Date(comment.time);
                      const diffTime = Math.abs(currentDate - commentDate); // Selisih waktu dalam milidetik
                      let formattedDate;
+
+                    //  if (diffTime < 60) { // If less than 1 minute
+                    //     formattedDate = `${Math.floor(diffTime)} seconds ago`;
+                    // } 
+                    //  if (diffTime < 24 * 60 * 60 * 1000) { // Jika kurang dari satu hari
+                    //      formattedDate = commentDate.toLocaleTimeString('id', {
+                    //          hour: '2-digit',
+                    //          minute: '2-digit'
+                    //      });
+                    //  } else if (diffTime < 2 * 24 * 60 * 60 * 1000) { // Jika lebih dari satu hari tapi kurang dari dua hari
+                    //      formattedDate = 'Kemarin';
+                    //  } else { // Jika lebih dari dua hari
                          formattedDate = commentDate.toLocaleDateString('id', {
                              year: 'numeric',
                              month: 'long',
                              day: 'numeric'
                          });
-
+                    //  }
                      
                     return (
                         <Link

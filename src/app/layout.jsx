@@ -4,6 +4,7 @@ import Footer from '@/components/Utilities/Footer/Footer'
 import UserActionButton from '@/components/Utilities/Menu/userActionButton'
 import SideMenu from '@/components/Utilities/SideMenu/SideMenu' 
 import SplashScreen from '@/components/splashScreen'
+import Menu from '@/components/Utilities/Menu'
 
 export const metadata = {
   manifest: '/manifest.json',
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
         <Navbar />
           <div className='md:block hidden'>
             <UserActionButton className=""/>
+            {/* <Menu />  */}
           </div>
         {children}  
         <SideMenu/>

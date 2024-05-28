@@ -16,12 +16,22 @@ const CommentBox = async ({ anime_mal_id }) => {
                 // console.log(comment.time)
                 const commentDate = new Date(comment.time);
                 const diffTime = Math.abs(currentDate - commentDate); // Selisih waktu dalam milidetik
-                let formattedDate; // Jika lebih dari dua hari
+                let formattedDate;
+
+                // if (diffTime < 24 * 60 * 60 * 1000) { // Jika kurang dari satu hari
+                //     formattedDate = commentDate.toLocaleTimeString('id', {
+                //         hour: '2-digit',
+                //         minute: '2-digit'
+                //     });
+                // } else if (diffTime < 2 * 24 * 60 * 60 * 1000) { // Jika lebih dari satu hari tapi kurang dari dua hari
+                //     formattedDate = 'Kemarin';
+                // } else { // Jika lebih dari dua hari
                     formattedDate = commentDate.toLocaleDateString('id', {
                         year: 'numeric',
                         month: 'long',
                         day: 'numeric'
                     });
+                // }
                 return (
                     <>
                     <div key={comment.id} className="text-color-dark bg-color-primary p-2 rounded-lg">
